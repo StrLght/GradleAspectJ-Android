@@ -5,7 +5,7 @@ Supports writing code with AspectJ-lang in `.aj` files and in java-annotation st
 Full support of Android product flavors and build types.
 Support Kotlin, Groovy, Scala and any other languages that compiles into java bytecode.
 
-Actual version: `com.archinamon:android-gradle-aspectj:2.0.2`.
+Actual version: `com.archinamon:android-gradle-aspectj:2.0.2-SNAPSHOT`.
 Re-written with brand new <a href="http://tools.android.com/tech-docs/new-build-system/transform-api" target="_blank">Transform API</a>!
 
 This plugin is completely friendly with <a href="https://bitbucket.org/hvisser/android-apt" target="_blank">APT</a> (Android Annotation Processing Tools) and <a href="https://github.com/evant/gradle-retrolambda/" target="_blank">Retrolambda</a> project (not beta, sadly but rl-transformer not works properly with my plugin now).
@@ -36,13 +36,13 @@ Usage
 First add a maven repo link into your `repositories` block of module build file:
 ```groovy
 mavenCentral()
-maven { url 'https://github.com/Archinamon/GradleAspectJ-Android/raw/master' }
+maven { url 'https://github.com/StrLght/GradleAspectJ-Android/raw/gradle-2.2-artifact' }
 ```
 Don't forget to add `mavenCentral()` due to some dependencies inside AspectJ-gradle module.
 
 Add the plugin to your `buildscript`'s `dependencies` section:
 ```groovy
-classpath 'com.archinamon:android-gradle-aspectj:2.0.2'
+classpath 'com.archinamon:android-gradle-aspectj:2.0.2-SNAPSHOT'
 ```
 
 Apply the `aspectj` plugin:
@@ -219,7 +219,7 @@ Changelog
 * configured properly compile-order for gradle-Retrolambda plugin;
 * added roots for preprocessing generated files (needed to support Dagger, etc.);
 * added MultiDex support;
- 
+
 #### Known limitations
 * You can't speak with sources in aspectj folder due to excluding it from java compiler;
 * Doesn't support gradle-experimental plugin;
