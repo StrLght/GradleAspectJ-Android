@@ -27,13 +27,14 @@ dependencies {
 }
 
 group = 'com.archinamon'
-version = '2.0.2'
+version = '2.0.2-SNAPSHOT'
 
 // local archive :: debug mode
 uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: uri('../'))
+            pom.artifactId = 'android-gradle-aspectj'
         }
     }
 }
